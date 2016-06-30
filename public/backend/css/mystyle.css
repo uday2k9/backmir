@@ -1,0 +1,24 @@
+
+pre {
+    display: block;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    font-size: 13px;
+    line-height: 1.42857143;
+    color: #FCF7F7 !important;
+    word-break: break-all;
+    word-wrap: break-word;
+    background-color: #7a7878;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+}
+.info_details dt{
+    border-right: 1px solid #8a8989;
+    padding-right: 8px;
+} 
+.list_head {
+    color: #FCF7F7 !important;
+    background-color: #7a7878;
+    border-color: #ccc;
+}

@@ -1,0 +1,354 @@
+/*!
+ * bootstrap-tokenfield
+ * https://github.com/sliptree/bootstrap-tokenfield
+ * Copyright 2013-2014 Sliptree and other contributors; Licensed MIT
+ */
+@-webkit-keyframes blink {
+  0% {
+    border-color: #ededed;
+  }
+  100% {
+    border-color: #b94a48;
+  }
+}
+@-moz-keyframes blink {
+  0% {
+    border-color: #ededed;
+  }
+  100% {
+    border-color: #b94a48;
+  }
+}
+@keyframes blink {
+  0% {
+    border-color: #ededed;
+  }
+  100% {
+    border-color: #b94a48;
+  }
+}
+.tokenfield {
+  height: auto;
+  min-height: 34px;
+  padding-bottom: 0px;
+}
+.tokenfield.focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+.tokenfield .ingredient{
+  border: 1px solid #5D1611 !important;
+  color: #FEFEFE !important;
+  background: transparent linear-gradient(to bottom, #9C2B2B 0%, #992517 100%) repeat scroll 0% 0% !important;
+} 
+.tokenfield .feeling{
+    border: 1px solid #B7C657 !important;
+    color: #FEFEFE !important;
+    background: transparent linear-gradient(to bottom, #9EAC45 0%, #A1B718 100%) repeat scroll 0% 0% !important;
+}
+.tokenfield .brand{
+      border: 1px solid #FBB172 !important;
+    color: #FEFEFE !important;
+    background: transparent linear-gradient(to bottom, #EA7F44 0%, #F27B4D 100%) repeat scroll 0% 0% !important;
+}
+.tokenfield .tag{
+      border: 1px solid #0ACBA6 !important;
+    color: #FEFEFE !important;
+    background: transparent linear-gradient(to bottom, #0ACBA6 0%, #0ACBA6 100%) repeat scroll 0% 0% !important;
+}
+
+.tokenfield .tres {
+   background: rgba(0, 0, 0, 0) linear-gradient(to bottom, #ffffff 0%, #ffffff 100%) repeat scroll 0 0;
+    border: 1px solid #ffffff;
+    border-radius: 22px;
+    box-sizing: border-box;
+    color: #367984;
+    cursor: default;
+    display: inline-block;
+    float: left;
+    font-size: 17px;
+    font-weight: 300;
+    height: 44px;
+    line-height: 44px;
+    margin: 5px 0 0 5px;
+    padding: 0 35px 0 15px;
+    position: relative;
+    vertical-align: top;
+    white-space: nowrap;
+    width: auto;
+}
+}
+
+.tokenfield .token {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  display: inline-block;
+  border: 1px solid #d9d9d9;
+  background-color: #ededed;
+  white-space: nowrap;
+  margin: -1px 5px 5px 0;
+  height: 22px;
+  vertical-align: top;
+  cursor: default;
+}
+.tokenfield .token:hover {
+  border-color: #b9b9b9;
+}
+.tokenfield .token.active {
+  border-color: #52a8ec;
+  border-color: rgba(82, 168, 236, 0.8);
+}
+.tokenfield .token.duplicate {
+  border-color: #ebccd1;
+  -webkit-animation-name: blink;
+  animation-name: blink;
+  -webkit-animation-duration: 0.1s;
+  animation-duration: 0.1s;
+  -webkit-animation-direction: normal;
+  animation-direction: normal;
+  -webkit-animation-timing-function: ease;
+  animation-timing-function: ease;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+.tokenfield .token.invalid {
+  background: none;
+  border: 1px solid transparent;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  border-bottom: 1px dotted #d9534f;
+}
+.tokenfield .token.invalid.active {
+  background: #ededed;
+  border: 1px solid #ededed;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.tokenfield .token .token-label {
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-left: 4px;
+  vertical-align: top;
+  width: auto;
+}
+.tokenfield .token .close {
+  font-family: Arial;
+  display: inline-block;
+  line-height: 100%;
+  font-size: 1.1em;
+  line-height: 1.49em;
+  margin-left: 5px;
+  float: none;
+  height: 100%;
+  vertical-align: top;
+  padding-right: 4px;
+}
+.tokenfield .token-input {
+  background: none;
+  width: 60px;
+  min-width: 60px;
+  border: 0;
+  height: 20px;
+  padding: 0;
+  margin-bottom: 6px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.tokenfield .token-input:focus {
+  border-color: transparent;
+  outline: 0;
+  /* IE6-9 */
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.tokenfield.disabled {
+  cursor: not-allowed;
+  background-color: #eeeeee;
+}
+.tokenfield.disabled .token-input {
+  cursor: not-allowed;
+}
+.tokenfield.disabled .token:hover {
+  cursor: not-allowed;
+  border-color: #d9d9d9;
+}
+.tokenfield.disabled .token:hover .close {
+  cursor: not-allowed;
+  opacity: 0.2;
+  filter: alpha(opacity=20);
+}
+.has-warning .tokenfield.focus {
+  border-color: #66512c;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b;
+}
+.has-error .tokenfield.focus {
+  border-color: #843534;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
+}
+.has-success .tokenfield.focus {
+  border-color: #2b542c;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168;
+}
+.tokenfield.input-sm,
+.input-group-sm .tokenfield {
+  min-height: 30px;
+  padding-bottom: 0px;
+}
+.input-group-sm .token,
+.tokenfield.input-sm .token {
+  height: 20px;
+  margin-bottom: 4px;
+}
+.input-group-sm .token-input,
+.tokenfield.input-sm .token-input {
+  height: 18px;
+  margin-bottom: 5px;
+}
+.tokenfield.input-lg,
+.input-group-lg .tokenfield {
+  height: auto;
+  min-height: 45px;
+  padding-bottom: 4px;
+}
+.input-group-lg .token,
+.tokenfield.input-lg .token {
+  height: 25px;
+}
+.input-group-lg .token-label,
+.tokenfield.input-lg .token-label {
+  line-height: 23px;
+}
+.input-group-lg .token .close,
+.tokenfield.input-lg .token .close {
+  line-height: 1.3em;
+}
+.input-group-lg .token-input,
+.tokenfield.input-lg .token-input {
+  height: 23px;
+  line-height: 23px;
+  margin-bottom: 6px;
+  vertical-align: top;
+}
+.tokenfield.rtl {
+  direction: rtl;
+  text-align: right;
+}
+.tokenfield.rtl .token {
+  margin: -1px 0 5px 5px;
+}
+.tokenfield.rtl .token .token-label {
+  padding-left: 0px;
+  padding-right: 4px;
+}
+
+.tokenfield {
+    height: auto;
+    min-height: 34px;
+    padding-bottom: 0px;
+    margin: 0;
+    padding: 0;
+    min-height: 54px;
+    background: none;
+    border-radius: inherit;
+    border: none;
+	padding-right: 55px;
+}
+.tokenfield .token-input {
+    background: none;
+    width: 100%;
+    min-width: 100%;
+    border: 0;
+    height: 53px;
+    padding: 0;
+    margin-bottom: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.tokenfield .token {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    display: inline-block;
+    border: 1px solid #d9d9d9;
+    background-color: #ededed;
+    white-space: nowrap;
+    margin: -1px 5px 5px 0;
+    height: 22px;
+    vertical-align: top;
+    cursor: default;
+    width: auto;
+    float: left;
+    margin: 5px 0px 0px 5px;
+    height: 44px;
+    border: 1px solid #62B0BD;
+    border-radius: 22px;
+    line-height: 44px;
+    font-size: 17px;
+    color: #367984;
+    font-weight: 300;
+    padding: 0px 35px 0px 15px;
+    position: relative;
+    background: #81ddec;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…EiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top, #81ddec 0%, #6ec5d4 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#81ddec), color-stop(100%,#6ec5d4));
+    background: -webkit-linear-gradient(top, #81ddec 0%,#6ec5d4 100%);
+    background: -o-linear-gradient(top, #81ddec 0%,#6ec5d4 100%);
+    background: -ms-linear-gradient(top, #81ddec 0%,#6ec5d4 100%);
+    background: linear-gradient(to bottom, #81ddec 0%,#6ec5d4 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#81ddec', endColorstr='#6ec5d4',GradientType=0 );
+}
+.tokenfield .token .token-label{
+	padding-left:0;	
+}
+.tokenfield .token .close {
+    font-family: Arial;
+    display: inline-block;
+    line-height: 100%;
+    font-size: 1.1em;
+    line-height: 1.49em;
+    margin-left: 5px;
+    float: none;
+    height: 100%;
+    vertical-align: top;
+    padding-right: 4px;
+    width: 20px;
+    height: 20px;
+    font-size: 14px;
+    line-height: 20px;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    border-radius: 50%;
+    position: absolute;
+    right: 5px;
+    top: 12px;
+    padding: 0;
+}
+.tokenfield .token-input{
+	color: #6DC4D3;	
+}
+.tokenfield .token{
+	max-width: 105px	
+}
+.tokenfield .token .token-label{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 100% !important;		
+}

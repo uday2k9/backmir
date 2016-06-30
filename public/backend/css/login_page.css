@@ -1,0 +1,87 @@
+@charset "utf-8";
+/* CSS Document */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic);
+
+html,body{
+	height:100%;	
+}
+body{
+	background:url(../images/login_back.jpg) no-repeat 0 0/cover;
+	font-family: 'Open Sans', sans-serif;	
+}
+.panel{
+	background-color: rgba(255, 255, 255, 0.33);
+    border-radius: 0;
+    border: none;
+}
+.panel-default>.panel-heading {
+    color: #333;
+    background-color: #f5f5f5;
+    border-color: #ddd;
+    border-radius: 0;
+    border-top: 3px solid #4ecfe7;
+    padding: 10px 15px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 19px;
+}
+.panel-default>.panel-heading i{
+	margin-right:10px;	
+}
+.form-horizontal .control-label {
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+}
+.form-control{
+	height:41px;
+	background-color:rgba(255, 255, 255, 0.65);	
+}
+.btn-primary {
+    color: #fff;
+    background-color: #4ecfe7;
+    border-color: #4ecfe7;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #4ecfe7;
+    border-color: #4ecfe7;
+    font-size: 21px;
+    color: #fff;
+    font-weight: 300;
+    line-height: 24px;
+    padding: 6px 45px;
+    background: #22c3e1;
+    border: 1px solid #4ecfe7;
+    border-radius: 5px;
+    font-family: 'Open Sans', sans-serif;
+}
+.tab_cell{
+    display: table-cell;
+    height: 100%;
+    vertical-align: middle;	
+}
+.tab{
+    height: 88%;
+    display: table;
+    width: 100%;	
+}
+.navbar-default {
+    background-color: #22C3E1;
+    border-color: #e7e7e7;
+    border-radius: 0;
+    border: none;
+    border-bottom: 2px solid #fff;
+}
+.navbar-default .navbar-brand {
+    color: #fff;
+}
+.navbar-default .navbar-nav>li>a {
+    color: #fff;
+    font-size: 17px;
+}
+.navbar-default .navbar-nav>li>a>i{
+	margin-right:10px;	
+}
+.panel-body {
+    padding: 30px 15px;
+}

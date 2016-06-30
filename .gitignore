@@ -1,0 +1,8 @@
+.htaccess
+.env
+.ftpquota
+error_log
+storage/logs/laravel.log
+designs/*
+config/database.php
+uploads/*
